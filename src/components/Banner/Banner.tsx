@@ -1,9 +1,6 @@
-
 import Step from "./Step"
 
 function Banner() {
-
-    
     return(
         <>
             <div className="relative hidden sm:block">
