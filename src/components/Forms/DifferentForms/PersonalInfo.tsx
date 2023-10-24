@@ -1,6 +1,6 @@
 // PersonalInfo.js
 import { DataFormat } from "../../../interfaces/DataFormat";
-
+import { personalInfo } from "../../../data";
 interface PersonalInfoProps {
     getFromChild: (Data: DataFormat) => void;
     Data: DataFormat;
