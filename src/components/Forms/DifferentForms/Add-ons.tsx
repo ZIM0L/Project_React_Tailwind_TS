@@ -32,8 +32,10 @@ function AddOns({ getFromChild, Data }: addOns) {
                     <div key={key} onClick={() => handleClick(key)} className={` ${Data.addOns.includes(key) && `border-purple-700`} flex flex-row  w-full justify-between p-4 border-2 rounded-md items-center cursor-pointer`}>
                         <div className="flex flex-row ">
                             {/* fix how it looks */}
-                             <input type="checkbox" checked={Data.addOns.includes(key)} id="OnlineService"  
-      className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-pink-500 checked:bg-pink-500 checked:before:bg-pink-500 hover:before:opacity-10" onChange={()=>{}}/> 
+                            <div className="flex flex-col justify-center">
+                                <input type="checkbox" checked={Data.addOns.includes(key)} id="OnlineService"  
+                                className="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-PurplishBlue checked:bg-PurplishBlue checked:before:bg-PurplishBlue hover:before:opacity-10" onChange={()=>{}}/> 
+                            </div>
                                 <div className="pl-4">
                                     <p className=" self-start text-lg font-bold text-MarineBlue">{key}</p>
                                     <p>{addOns[key][0]}</p>

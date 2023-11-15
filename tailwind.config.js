@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
     },
     extend: {
       colors: {
@@ -22,10 +19,9 @@ export default {
         LightGray: "hsl(229, 24%, 87%)",
         Magnolia: "hsl(217, 100%, 97%)",
         Alabaster: "hsl(231, 100%, 99%)",
-        White: "hsl(0, 0%, 100%)"
-      }
+        White: "hsl(0, 0%, 100%)",
+      },
     },
   },
   plugins: [],
-}
-
+};

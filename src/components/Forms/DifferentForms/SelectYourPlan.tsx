@@ -21,15 +21,15 @@ function SelectPlan({ getFromChild, Data }: SelectPlan ){
     return(
         <form>
         <div className="pb-6">
-            <h1 className="font-bold text-4xl text-MarineBlue py-2">Select your plan</h1>
+            <h1 className="font-bold text-3xl md:text-4xl text-MarineBlue py-2">Select your plan</h1>
             <p className="text-CoolGray">You have the option of monthly or yearly billing.</p>
         </div>
             <div className="flex flex-col">
-                <div className="flex flex-row min-w-fit space-x-2 ">
+                <div className="flex flex-col md:flex-row min-w-fit md:space-x-2 ">
                     {plans && Object.keys(plans).map((key) => {
                         return (
-                            <div key={key} onClick={() => handleInputChange(key)} className={` ${Data.plan.includes(key) && `border-purple-700`} w-[142px] border-2 cursor-pointer rounded-md text-left flex flex-col justify-between py-4 pl-4`}>
-                                {plans[key] && <img src={plans[key][0]} alt="" className="w-11 pb-12" />}
+                            <div key={key} onClick={() => handleInputChange(key)} className={` ${Data.plan.includes(key) && `border-purple-700`} md:w-[142px] border-2 cursor-pointer rounded-md text-left flex flex-row md:flex-col sm:space-x-5 md:space-x-0 sm:items-center md:items-start md:justify-between py-4 pl-4`}>
+                                {plans[key] && <img src={plans[key][0]} alt="ic" className="w-11 pb-12" />}
                                 <div className="flex flex-col">
                                     <span className="text-MarineBlue font-semibold">{key}</span>
                                     <span className="text-CoolGray">{Data.subscriptionTime == "Monthly" ? plans[key][1] :plans[key][2]}</span>
@@ -55,7 +55,7 @@ function SelectPlan({ getFromChild, Data }: SelectPlan ){
                                     );
                                 }}
                                 // Fix animation button
-                                className={`w-11 h-6 bg-MarineBlue rounded-full peer peer-focus:ring-MarineBlue ${Data.subscriptionTime == "Monthly" ? `peer-checked:after:translate-x-full` : `after:translate-x-full`}  peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-[6px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-MarineBlue`}
+                                className={`w-11 h-6 bg-MarineBlue rounded-full peer peer-focus:ring-MarineBlue ${Data.subscriptionTime == "Monthly" ? `` : `after:translate-x-full`}  peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-[6px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-MarineBlue`}
                                 ></div>
                             </label>
                         </div>
